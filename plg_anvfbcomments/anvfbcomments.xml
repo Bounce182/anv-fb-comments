@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>Content - ANV Facebook Comments</name>
+	<author>AnV</author>
+	<creationDate>February 2012</creationDate>
+	<copyright>(C) 2012 - anvweb.com</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>admin@anvweb.com</authorEmail>
+	<authorUrl>www.anvweb.com</authorUrl>
+	<version>1.0</version>
+	<description>ANV FB COMMENTS CONTENT PLUGIN</description>
+	<files>
+		<filename plugin="anvfbcomments">anvfbcomments.php</filename>
+		<folder>anvfbcomments/elements</folder>
+		<folder>anvfbcomments/helpers</folder>
+		<folder>anvfbcomments/assets</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_anvfbcomments.ini</language>
+	</languages>
+	<params addpath="/plugins/content/anvfbcomments/elements">
+		<param name="fb_locale" type="text" size="50" default="en_GB" label="FB LOCALE" description="FB LOCALE DESC" />
+		<param name="number_of_posts" type="text" size="50" default="10" label="NUMBER OF POSTS" description="NUMBER OF POSTS DESC" />
+		<param name="comments_form_width" type="text" size="50" default="400" label="WIDTH" description="WIDTH DESC" />
+		<param name="color_scheme" type="radio" default="light" label="COLOR SCHEME" 
+		description="COLOR SCHEME DESC">
+			<option value="light">COLOR SCHEME LIGHT</option>
+			<option value="dark">COLOR SCHEME DARK</option>
+		</param>
+		<param name="fb_admin_ids" type="text" size="50" default="" label="ADMIN IDS" description="ADMIN IDS DESC" />
+		<param name="fb_app_id" type="text" size="50" default="" label="APPLICATION ID" description="APPLICATION ID DESC" />		
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="top_divider" type="text" size="50" default="" label="TOP DIVIDER" description="TOP DIVIDER DESC" />
+		<param name="bot_divider" type="text" size="50" default="" label="BOTTOM DIVIDER" description="BOTTOM DIVIDER DESC" />								
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="content_section_list" type="contentsectionlist" style="width:95%;" class="inputbox" multiple="multiple" default="" label="CONTENT SECTIONS" description="CONTENT SECTIONS DESC" />
+		<param name="content_category_list" type="contentcategorylist" style="width:95%;" class="inputbox" multiple="multiple" default="" label="CONTENT CATEGORIES" description="CONTENT CATEGORIES DESC" />
+		<param name="show_on_uncategorised" type="radio" default="1" label="SHOW ON UNCATEGORISED" 
+		description="SHOW ON UNCATEGORISED DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="ban_on_frontpage" type="radio" default="1" label="SHOW PLUGIN ON FRONTPAGE" description="SHOW PLUGIN ON FRONTPAGE DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="show_comments_count" type="radio" default="0" label="SHOW COMMENTS COUNT" description="SHOW COMMENTS COUNT DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="left_divider" type="text" size="50" default="" label="LEFT DIVIDER" description="LEFT DIVIDER DESC" />
+		<param name="right_divider" type="text" size="50" default="" label="RIGHT DIVIDER" description="RIGHT DIVIDER DESC" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="send_notifications" type="radio" default="0" label="SEND NOTIFICATIONS" description="SEND NOTIFICATIONS DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="emails_list" type="text" size="50" default="" label="EMAILS LIST" description="EMAILS LIST DESC" />
+		<param name="email_subject" type="text" size="50" default="New facebook comment from %s. Date: %s" label="EMAIL SUBJECT" description="EMAIL SUBJECT DESC" />
+		<param name="email_from" type="text" size="50" default="dontreply@anvweb.com" label="EMAIL FROM" description="EMAIL FROM DESC" />
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="seo_boost" type="radio" default="1" label="SEO BOOST" description="SEO BOOST DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>			
+		<param name="comments_output_title" type="text" size="50" default="Anv Facebook comments" 
+		label="COMMENTS OUTPUT TITLE" description="COMMENTS OUTPUT TITLE DESC" />
+		<param name="hide_from_visitors" type="radio" default="0" label="HIDE FROM VISITORS" description="HIDE FROM VISITORS DESC">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>	
+		<param name="time_format" type="text" size="50" default="l jS \of F Y h:i:s A" label="TIME FORMAT" description="TIME FORMAT DESC" />
+		<param name="cache" type="list" default="0" label="CACHE" description="CACHE DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+			<option value="2">Use Global</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="CACHE TIME" description="CACHE TIME DESC" />	
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="like_button" type="list" default="1" label="LIKE BUTTON" description="LIKE BUTTON DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="send_button" type="list" default="1" label="SEND BUTTON" description="SEND BUTTON DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="layout_style" type="list" default="standart" label="LAYOUT STYLE" description="LAYOUT STYLE DESC">
+			<option value="standart">standart</option>
+			<option value="button_count">button count</option>
+			<option value="box_count">box count</option>
+		</param>
+		<param name="like_button_width" type="text" size="50" default="400" label="LIKE BUTTON WIDTH" description="LIKE BUTTON WIDTH DESC" />
+		<param name="show_faces" type="list" default="0" label="SHOW FACES" description="SHOW FACES DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="verb_to_display" type="list" default="like" label="VERB TO DISPLAY" description="VERB TO DISPLAY DESC">
+			<option value="like">Like</option>
+			<option value="recommend">Recommend</option>
+		</param>
+		<param name="font" type="list" default="" label="FONT" description="FONT DESC">
+			<option value=""></option>
+			<option value="arial">arial</option>
+			<option value="lucida grande">lucida grande</option>
+			<option value="segoe ui">segoe ui</option>
+			<option value="tahoma">tahoma</option>
+			<option value="trebuchet ms">trebuchet ms</option>
+			<option value="verdana">verdana</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="show_copyright" type="list" default="1" label="SHOW COPYRIGHT" description="SHOW COPYRIGHT DESC">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="copyright_line" type="text" size="50" 
+		default="&lt;span class=&quot;pafc_copyright&quot;&gt;ANV Facebook 
+		comments plugin by &lt;a href=&quot;http://www.anvweb.com&quot; target=&quot;_blank&quot;&gt;www.anvweb.com&lt;/a&gt;&lt;/span&gt;" 
+		label="COPYRIGHT LINE" description="COPYRIGHT LINE DESC" />	
+	</params>			
+</install>
+
